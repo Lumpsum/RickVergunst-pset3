@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/move_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rick.rickvergunst_pset3.SearchPage"
+    >
+
+    <TextView
+        android:id="@+id/watchWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="'s Watchlist"
+        android:textSize="30dp"
+        android:layout_toLeftOf="@+id/clearButton"
+        android:padding="20dp"
+        />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:padding="20dp"
+        android:layout_alignParentRight="true"
+        android:onClick="emptyWatchList"
+        />
+    <ListView
+        android:id="@+id/watchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/watchWelcome"
+        android:layout_above="@+id/LinearLayout"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:id="@+id/LinearLayout"
+        >
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="0.30"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/searchPageButton"
+            android:onClick="toHome"
+            android:text="Home"
+            />
+
+        <Button
+            android:id="@+id/searchPageButton"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Search Page"
+            android:onClick="toSearchPage"
+            />
+
+        <Button
+            android:id="@+id/watchButton"
+            android:layout_toRightOf="@+id/searchPageButton"
+            android:layout_width="0dp"
+            android:layout_weight="0.30"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Watchlist"
+            android:onClick="toWatchList"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
