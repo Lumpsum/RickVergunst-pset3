@@ -45,7 +45,6 @@ public class MovieInf extends AppCompatActivity {
 
         // Assign the specific views to variables
         posterImg = (ImageView)findViewById(R.id.posterImg);
-        titleText = (TextView)findViewById(R.id.specTitle);
         infoText = (TextView)findViewById(R.id.specInfo);
         plotText = (TextView)findViewById(R.id.specPlot);
         button = (Button)findViewById(R.id.watchListMove);
