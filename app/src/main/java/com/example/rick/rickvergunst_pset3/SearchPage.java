@@ -120,6 +120,9 @@ public class SearchPage extends AppCompatActivity {
                     // Statement for a search
                     if (param.equals("s")) {
 
+                        // Clear the array
+                        items.clear();
+
                         //Fils an array with items of the returned query using a JsonArray
                         try {
                             JSONArray jsonArray = jsonObject.getJSONArray("Search");
